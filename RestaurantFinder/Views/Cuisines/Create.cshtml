@@ -4,13 +4,12 @@
 
 @model RestaurantFinder.Models.Cuisine 
 <!-- tells this page which Model to pull into the View page -->
-<h4> Add a new cuisine </h4>
-@using (Html.BeginForm()) @* automatically uses method=post  *@
+<h4> Add a New Cuisine </h4>
+<!-- automatically uses method=post -->
+@using (Html.BeginForm()) 
 {
   @Html.LabelFor(model => model.Name) @* label for form field. HTML Helper uses lamda expression to create anonymous function, to retrieve properties *@
   @Html.TextBoxFor(model => model.Name) @* text box for form field *@
   <input type="submit" value="Add a new cuisine" />
 
 }
-<p>@Html.ActionLink("Show all Cuisines", "Index")</p>
-<p>@Html.ActionLink("Home", "Index", "Home")</p>

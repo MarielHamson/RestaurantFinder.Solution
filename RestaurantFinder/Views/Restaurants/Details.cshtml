@@ -1,0 +1,12 @@
+@{
+  Layout = "_Layout";
+}
+
+@model RestaurantFinder.Models.Restaurant
+
+<h2> Restaurant Info </h2>
+<hr /> @* Horizontal Line Break *@
+<h3> @Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name) | @Html.DisplayNameFor(model => model.Rating): @Html.DisplayFor(model => model.Rating) </h3>
+
+<p>@Html.ActionLink("Edit Restaurant", "Edit", new { id = Model.RestaurantId }) </p>
+<p>@Html.ActionLink("Delete Restaurant", "Delete", new { id = Model.RestaurantId })</p>

@@ -1,0 +1,25 @@
+@{
+  Layout = "_Layout";
+}
+
+@using RestaurantFinder.Models;
+@model RestaurantFinder.Models.Cuisine
+
+<h2> @Html.DisplayFor(model => model.Name) </h2> @*Display name of cuisine*@
+
+@if (@Model.Restaurants.Count == 0)
+{
+<p> No restaurants have been added yet </p>
+}
+
+<ul> 
+@foreach (Restaurant restaurant in @Model.Restaurants)
+{
+  <li>@restaurant.Name <br>
+  Rating: @restaurant.Rating  </li>
+}
+</ul>
+<hr />
+<p>@Html.ActionLink("Add New Restaurant", "Create", "Restaurants") </p>
+<p>@Html.ActionLink("Edit Cuisine Name", "Edit", new { id = Model.CuisineId })</p> @* third argument creates new id variable that is equal to that specific cuisine's CuisineId, to be passed into the Edit route *@
+<p>@Html.ActionLink("Delete Cuisine", "Delete", new { id = Model.CuisineId })</p>

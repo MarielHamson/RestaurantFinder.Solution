@@ -1,4 +1,4 @@
-namespace RestaurantFinder.Models;
+namespace RestaurantFinder.Models
 {
   public class Restaurant
   {

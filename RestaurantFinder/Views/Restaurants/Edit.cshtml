@@ -1,0 +1,24 @@
+@{
+  Layout = "_Layout";
+}
+
+@model RestaurantFinder.Models.Restaurant
+<h2> Edit </h2>
+
+<h4> Edit Restaurant Info: @Html.DisplayFor(model => model.Name)</h4>
+
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.RestaurantId)
+
+  @Html.LabelFor(model => model.Name)
+  @Html.EditorFor(model => model.Name)
+
+  @Html.LabelFor(model => model.Rating)
+  @Html.EditorFor(model => model.Rating, new { type="number", min="0", max="5" })
+
+  @Html.LabelFor(model => model.Cuisine)
+  @Html.DropDownList("CuisineId")
+
+  <input type="submit" value="Save" />
+}

@@ -1,0 +1,18 @@
+@{
+  Layout = "_Layout";
+}
+@model RestaurantFinder.Models.Cuisine
+
+<h2> Edit</h2>
+
+<h4> Edit this cuisine: @Html.DisplayFor(model => model.Name) </h4>
+
+@using (Html.BeginForm()) // automatically includes "method= post"
+{
+  @Html.HiddenFor(model => model.CuisineId) // Does not show ID to user, is needed for Edit route to know which Cuisine is changing
+
+  @Html.LabelFor(model => model.Name) // Label for text field
+  @Html.EditorFor(model => model.Name) // text form field
+
+  <input type="submit" value="Save" />
+}

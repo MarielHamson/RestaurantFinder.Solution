@@ -1,8 +1,10 @@
 @{
-  Layout = "_Layout" // With this layout statement at the top of our files we can import the body of our file into a standard html template that we create in our shared folder, this is also where we can link bootstrap and a styles sheet
+  Layout = "_Layout"; // With this layout statement at the top of our files we can import the body of our file into a standard html template that we create in our shared folder, this is also where we can link bootstrap and a styles sheet
 }
 
-<h1>Welcome to the Restaurant Finder application</h1>
+<div class="jumbotron">
+<h1>Welcome to the Restaurant Finder Application</h1>
 
-<p>@Html.ActionLink("See all restaurants", "Index", "Restaurants")</p> @* with the Html.ActionLink we can have three perameters; the first on will be what the link text will be, the second will be what view file it will redirect to, and the third will be what view folder that file resides in. If you only have the first two parameters, the redirected file will default to the view folder you are currently in. *@
-<p>@Html.ActionLink("See all cuisine types", "Index", "Cuisines")</p>
+<p>@Html.ActionLink("See All Restaurants", "Index", "Restaurants")</p> @* with the Html.ActionLink we can have three perameters; the first on will be what the link text will be, the second will be what view file it will redirect to, and the third will be what view folder that file resides in. If you only have the first two parameters, the redirected file will default to the view folder you are currently in. *@
+<p>@Html.ActionLink("See All Cuisine Types", "Index", "Cuisines")</p>
+</div>

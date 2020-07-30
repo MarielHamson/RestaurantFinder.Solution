@@ -1,0 +1,14 @@
+@{
+  Layout = "_Layout";
+}
+
+@model RestaurantFinder.Models.Restaurant
+
+<h2>Delete This Restaurant?</h2>
+
+@Html.DisplayFor(model => model.Name)
+
+@using (Html.BeginForm())
+{
+  <input type="submit" value="Delete" />
+}

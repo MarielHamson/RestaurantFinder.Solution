@@ -4,9 +4,25 @@
     <meta charset="utf-8">
     <title>Restaurant Finder</title>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
-    <link rel="stylesheet" href="~/css/styles.css">
+    <link rel='stylesheet' href='~/Css/styles.css'>
   </head>
   <body>
-    @RenderBody()
+    <div class="container">
+      <header id="header" class=" d-flex align-items-center header-transparent">
+        <div class="container d-flex align-items-center">
+          <div class="logo mr-auto">
+            <h1 class="text-light"><a href="index.html"><span></span></a></h1>
+          </div>
+    
+          <nav class="nav-menu d-none d-lg-block">
+            <ul>
+              <li class="book-a-table text-center"><a href="/">Home</a></li>
+              <li><a href="Cuisines">Cuisines</a></li>
+              <li><a href="Restaurants">Restaurants</a></li>
+            </ul>
+          </nav>
+      </header>
+      @RenderBody()
+    </div>
   </body>
 </html>
